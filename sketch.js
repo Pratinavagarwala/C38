@@ -1,3 +1,4 @@
+var allPlayers;
 var canvas,bgIMG;
 var database,playerCount;
 var gameState=0;
