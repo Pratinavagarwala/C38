@@ -1,7 +1,7 @@
 class Form{
     constructor(){
-        this.input=createInput("Name");
-        this.button=createButton("PLAY");
+        this.input=createInput("ENTER NAME");
+        this.button=createButton("START GAME");
 
         this.greet=createElement("h5");
     }
@@ -13,12 +13,12 @@ class Form{
     display(){
         var title=createElement("h2");
         title.html("Car Racing Game");
-        title.position(130,0);
+        title.position(displayWidth/2-50,0);
 
         
-        this.input.position(130,160);
+        this.input.position(displayWidth/2-50,displayHeight/2-80);
 
-        this.button.position(200,200);
+        this.button.position(displayWidth/2+5,displayHeight/2+40);
 
         this.button.mousePressed(()=>{
                 this.input.hide();
@@ -31,8 +31,8 @@ class Form{
                 player.update();
                 player.updateCount(playerCount);
 
-                greet.html("Welcome " +player.name);
-                greet.position(130,160);
+                this.greet.html("Welcome " +player.name);
+                this.greet.position(130,160);
                 }
         )
     }
